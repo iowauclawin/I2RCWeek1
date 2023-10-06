@@ -40,8 +40,8 @@ public class DriveTrain extends SubsystemBase
     leftDriveTalon.setNeutralMode(NeutralMode.Coast); //Sets leftDriveTalon to neutral
     rightDriveTalon.setNeutralMode(NeutralMode.Coast); //Sets rightDriveTalon to neutral
 
-    leftDriveTalon.setInverted(true); //Make sure the leftDriveTalon is inverted compared to the rightDriveTalon so it can move forward and backword correctly
-    rightDriveTalon.setInverted(false); //Make sure the rightDriveTalon is inverted compared to the leftDriveTalon so it can move forward and backword correctly
+    leftDriveTalon.setInverted(true); //Make sure the leftDriveTalon is inverted compared to the rightDriveTalon so it can move forward and backward correctly
+    rightDriveTalon.setInverted(false); //Make sure the rightDriveTalon is inverted compared to the leftDriveTalon so it can move forward and backward correctly
 
     leftDriveTalon.setSensorPhase(true); //Sets the sensors for leftDriveTalon to true
     rightDriveTalon.setSensorPhase(true); //Sets the sensors for rightDriveTalon to true
@@ -80,7 +80,7 @@ public class DriveTrain extends SubsystemBase
     SmartDashboard.putNumber("Left Voltage", leftDriveTalon.getMotorOutputPercent());
     SmartDashboard.putNumber("Right Voltage", rightDriveTalon.getMotorOutputPercent());
     SmartDashboard.putNumber("Angle", navx.getAngle());
-
+    SmartDashboard.putNumber("Ticks", getTicks());
     LeftVoltage.setDouble(leftDriveTalon.getMotorOutputPercent());
     RightVoltage.setDouble(rightDriveTalon.getMotorOutputPercent());
 
