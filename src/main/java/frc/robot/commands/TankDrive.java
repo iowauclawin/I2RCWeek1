@@ -34,7 +34,7 @@ public class TankDrive extends CommandBase {
 
     double rightPowerRaw = joy.getRawAxis(5); //Gets joystick axis 5
 
-    dt.tankDrive(leftPowerRaw*-0.2, rightPowerRaw*-0.2); //Converts the axes into a speed by scaling by 0.7
+    dt.tankDrive(leftPowerRaw*0.3, rightPowerRaw*0.3); //Converts the axes into a speed by scaling by 0.7
   }
 
   // Called once the command ends or is interrupted.
