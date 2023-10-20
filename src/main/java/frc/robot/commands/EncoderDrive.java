@@ -14,7 +14,7 @@ public class EncoderDrive extends CommandBase {
   /** Creates a new EncoderDrive. */
   DriveTrain dt;
   double setPoint;
-  public EncoderDrive(DriveTrain dt, Double setpoint) {
+  public EncoderDrive(DriveTrain dt, double setPoint) {
     // Use addRequirements() here to declare subsystem dependencies.
     this.dt = dt;
     this.setPoint = setPoint;

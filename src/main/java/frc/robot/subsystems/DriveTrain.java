@@ -10,6 +10,7 @@ import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
+import edu.wpi.first.math.util.Units;
 import edu.wpi.first.networktables.GenericEntry;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -67,6 +68,10 @@ public class DriveTrain extends SubsystemBase
     return (leftDriveTalon.getSelectedSensorPosition(0) + rightDriveTalon.getSelectedSensorPosition(0)) / 2.0;
   }
  
+
+  public double getMeters(){
+    return Math.PI*Units.inchesToMeters(6.0)* getTicks()/4096.0;
+  }
   public double getAngle(){ //Gets the robot's current angle
     return navx.getAngle(); 
   }
